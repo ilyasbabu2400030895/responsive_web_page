@@ -1,0 +1,89 @@
+/* ===== Header & Nav ===== */
+header {
+  height: 50px;
+  background: linear-gradient(90deg, purple 0%, blue 100%);
+  color: white;
+  line-height: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 20pt;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+nav ul li {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+/* hamburger menu icon */
+nav .menu {
+  margin-right: 15px;
+  font-size: 22pt;
+  cursor: pointer;
+  display: none;
+}
+
+/* ===== Footer ===== */
+footer {
+  height: 30px;
+  line-height: 30px;
+  font-size: 8pt;
+  color: white;
+  background: linear-gradient(90deg, red 0%, blue 100%);
+  text-align: center;
+}
+
+/* ===== Section ===== */
+section {
+  min-height: calc(100vh - 80px);
+  padding: 20px;
+  overflow: auto;
+}
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
+  nav .menu {
+    display: block;
+  }
+
+  nav ul {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: black;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  nav ul.active {
+    max-height: 300px; /* enough for items */
+  }
+
+  nav ul li {
+    background: linear-gradient(90deg, blue 0%, purple 100%);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+}
